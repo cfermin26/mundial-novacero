@@ -1,0 +1,110 @@
+body {
+  font-family: Roboto;
+}
+
+.background {
+  background-image: url("./images/novacero-background.png");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 800px;
+}
+
+.titulo {
+  font-size: 26px;
+  line-height: 1;
+  color: #005682;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.form-floating {
+  color: #005682;
+}
+
+.form-control {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #005682;
+  border-radius: 0;
+}
+
+.form-select {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #005682;
+  border-radius: 0;
+}
+
+/* .form-control:focus {
+    color: #495057;
+    background-color: transparent;
+    border-color: #a0837a;
+    outline: none;
+    box-shadow: none;
+  } */
+
+.form-label {
+  font-size: 14px;
+  color: #005682;
+  font-family: Roboto;
+  opacity: 0.65;
+  padding-left: 14px;
+}
+
+.btn-enviar {
+  background-color: #005682;
+  border-radius: 20px;
+  margin-top: 20px;
+  position: absolute;
+  border: 2px solid white;
+  line-height: 1;
+}
+
+.btn-descargar {
+  background-color: #005682;
+  border-radius: 20px;
+  border: 2px solid white;
+  line-height: 1;
+}
+
+.btn-cerrar {
+  border-radius: 20px;
+  border: 2px solid white;
+  line-height: 1;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+}
+
+.modal-backdrop {
+  background-color: #ffffff;
+}
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-dialog-centered {
+  min-height: calc(90% - 3.5rem);
+}
+
+tspan {
+  fill: #005682;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-family: Roboto;
+}
+
+#exportContainer {
+  max-width: 1600px;
+}
