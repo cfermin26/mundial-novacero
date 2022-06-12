@@ -43,7 +43,6 @@ const IndexPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setActiveSpinner(true);
-    // let cid = cuid();
     const dataForm = new FormData();
     dataForm.append("image", imagedata);
     dataForm.append("nombres", nombres);
@@ -54,42 +53,30 @@ const IndexPage = () => {
     dataForm.append("ciudad", ciudad);
     dataForm.append("direccion", direccion);
     const respuesta = await axios.post(
-      "https://kernel.inkside.studio/api/concurso",
+      "https://kernel.devseason.xyz/public/api/concurso",
       dataForm
     );
     if (respuesta.status === 200) {
       if (respuesta.data.status === "Ok") {
-        /* setNombres("");
+        setNombres("");
+        setApellidos("");
+        setCedula("");
         setEmail("");
         setCelular("");
-        setPais("");
-        setMensaje("");
-        setInteres("");
-        e.target.reset(); */
+        setCiudad("");
+        setDireccion("");
+        e.target.reset();
         setActiveSpinner(false);
-        // handleClose();
         Toast.fire({
           icon: "success",
           title: "Gracias por participar",
         });
-        /* Swal.fire({
-          title: "¡Gracias por confiar en nosotros!",
-          text: "Pronto nos pondremos en contacto con usted.",
-          showCloseButton: true,
-          icon: "success",
-        }); */
       } else {
         setActiveSpinner(false);
         Toast.fire({
           icon: "error",
           title: "Error al enviar la información",
         });
-        /* Swal.fire({
-          title: "Error al enviar la información",
-          text: "Intente en unos minutos...",
-          showCloseButton: true,
-          icon: "error",
-        }); */
       }
     } else {
       setActiveSpinner(false);
@@ -97,12 +84,6 @@ const IndexPage = () => {
         icon: "error",
         title: "Error al enviar la información",
       });
-      /* Swal.fire({
-        title: "Error al enviar informacion",
-        text: "Intente en unos minutos...",
-        showCloseButton: true,
-        icon: "error",
-      }); */
     }
   };
 
